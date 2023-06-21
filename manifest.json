@@ -1,0 +1,27 @@
+{
+  "background": {
+    "page": "background.html",
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "file://*/*",
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "contentscript.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "description": "contentscript <-> background stream example",
+  "icons": {},
+  "manifest_version": 2,
+  "name": "CS <-> BG Example",
+  "permissions": [],
+  "short_name": "csbg",
+  "version": "0.1"
+}
