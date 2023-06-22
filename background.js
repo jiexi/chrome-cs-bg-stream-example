@@ -18,7 +18,7 @@ const connect = remotePort => {
   });
 
   remotePort.onDisconnect.addListener(data => {
-    console.log("background disconnected", tabId, origin, data.error);
+    console.log("background disconnected", tabId, origin, data.error, chrome.runtime.lastError);
   });
 };
 
